@@ -1,0 +1,4 @@
+<h1>Positivo, negativo o cero</h1>
+<ul>
+    <li *ngFor="let num of numeros" [ngClass]="{positivo: num > 0, negativo: num < 0,cero: num==0}">{num}</li>
+</ul>

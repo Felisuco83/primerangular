@@ -1,0 +1,26 @@
+<h1>Ejemplo deportes</h1>
+<h3>Número de deportes {{sports.length}}</h3>
+<!--REALIZAMOS UN IF CON DIRECTIVA-->
+<div *ngIf="sports.length <= 7; then deportesMenor7; else deportesMayor7">
+    <!-- <p>Tienes menos de 7 deportes</p> -->
+</div>
+<h4 style="color: red;">El primer deporte es {{sports[0]}}</h4>
+
+<!--UN BUCLE SE REALIZA SOBRE LA ETIQUETA HTML QUE DESEAMOS REPETIR N VECES BUCLE EACH-->
+
+<ul>
+    <li *ngFor="let deporte of sports; let i = index">
+        Posición {{i}}, {{deporte}}
+    </li>
+</ul>
+
+<ng-template #deportesMayor7>
+    <h2 style="color:blue">
+        Tenemos más de 7 deportes
+    </h2>
+</ng-template>
+<ng-template #deportesMenor7>
+    <h2 style="color:red">
+        Tenemos menos de 7 deportes
+    </h2>
+</ng-template>

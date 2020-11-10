@@ -5,9 +5,7 @@ import {Component} from '@angular/core';
     //NOMBRE DEL COMPONENTE PARA LA APP
     selector: "app-primercomponente",
     //PLANTILLA PARA EL COMPONENTE
-    template: `<h1> Soy el primer componente de Angular </h1>
-    <h2> {{nombre}} </h2>
-    <h2> {{anyo}} </h2>`
+    templateUrl: "./primercomponente.component.html"
 })
 
 //ESTE NOMBRE ES PARA LA DECLARACIÓN EN MODULE
