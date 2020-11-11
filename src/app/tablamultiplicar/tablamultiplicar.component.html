@@ -1,0 +1,10 @@
+<form #tablaMultForm="ngForm">
+  <label for="numero">Numero: </label>
+  <input type="number" name="numero" #numero />
+  <button (click)="tablaMult()">Ver tabla</button>
+</form>
+<table *ngIf="activeTablaMult == true">
+  <tr *ngFor="let item of this.filas">
+    <td>{{ item }}</td>
+  </tr>
+</table>
